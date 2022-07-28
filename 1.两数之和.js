@@ -10,10 +10,12 @@
  * @param {number} target
  * @return {number[]}
  */
-var twoSum = function(nums, target) {
+var twoSum = function (nums, target) {
   var map = {};
   for (var i = 0; i < nums.length; i++) {
+    // 计算差值
     var diff = target - nums[i];
+    // map中存在差值对应的位置，直接返回
     if (map[nums[i]] !== undefined) {
       return [map[nums[i]], i];
     } else {
