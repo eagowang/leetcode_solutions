@@ -57,6 +57,8 @@
  * @return {number}
  */
 var maxArea = function (height) {
+  // 双指针，min(height[l], height[r])*(r-l)
+  // 较小的一遍高度移动
   var l = 0;
   var r = height.length - 1;
   var ans = 0;
