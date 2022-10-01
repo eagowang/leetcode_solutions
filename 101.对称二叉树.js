@@ -65,6 +65,7 @@ var check = function (left, right) {
   if (left.val !== right.val) return false;
   return check(left.left, right.right) && check(left.right, right.left);
 };
+
 var isSymmetric = function (root) {
   return check(root.left, root.right);
 };
